@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Новости - Frontend</title>
+    <title>Товары - Frontend</title>
     <meta
       name="description"
       content="Заглушка описания товарной страницы сайта"
@@ -12,39 +12,64 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="goods.html">Товары</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <nav aria-label="Хлебные крошки">
+      </div>
+      <div class="content">
+      <nav class="bread" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> →
-        <span>Товары</span>
+        <span>Новости</span>
       </nav>
-      <h1>Товар 1</h1>
-      <section>
-        <img src="/assets/images/" alt="Фото товара" width="200" height="250">
-        <p>Цена товара</p>
-      </section>
-      <h1>Товар 2</h1>
-      <section>
-        <img src="/assets/images/" alt="Фото товара" width="200" height="250">
-        <p>Цена товара</p>
-      </section>
-      <h1>Товар 3</h1>
-      <section>
-        <img src="/assets/images/" alt="Фото товара" width="200" height="250">
-        <p>Цена товара</p>
-      </section>
-    </main>
-    <footer>
+      <h1 class="good-name">Ложка</h1>
+      <div class="good-card">
+        <img
+          class="good-photo"
+          src="assets/images/spoon.jpg"
+          alt="Фото товара"
+          width="200"
+          height="220"
+        />
+        <div class="good-price">10 Рыбок</div>
+      </div>
+      <h1 class="good-name">Носок</h1>
+      <div class="good-card">
+        <img
+          class="good-photo"
+          src="assets/images/sock.png"
+          alt="Фото товара"
+          width="200"
+          height="250"
+        />
+        <div class="good-price">50 рыбок</div>
+      </div>
+      <h1 class="good-name">Тапочек</h1>
+      <div class="good-card">
+        <img
+          class="good-photo"
+          src="assets/images/shoe.jpg"
+          alt="Фото товара"
+          width="200"
+          height="250"
+        />
+        <div class="good-price">100 рыбок</div>
+      </div>
+      </div>
+    <div class="footer">
       <p>&copy; 2025 Frontend. Все права защищены.</p>
       <p>Телефон: +7 (123) 456-78-90</p>
       <p>
@@ -71,6 +96,7 @@
           });
         </script>
       </p>
-    </footer>
+    </div>
+    </div>
   </body>
 </html>

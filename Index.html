@@ -13,73 +13,98 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="goods.html">Товары</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Добро пожаловать на наш сайт!</h1>
-      <section id="services">
-        <h2>Информация об Авторе</h2>
-        <img src="/assets/images/Autor.png" alt="Фото автора" width="200" height="250">
-        <p>Титов Максим Дмитриевич</p>
-        <p>ЭФБО-16-24</p>
-        <p>Обо мне: Сначала был примерным мальчиком, а потооом... Продавал разбавленное молоко, тыгыдыкал в 5 утра, убирал предметы со стола.
-      </section>
-      <section>
-        <h2>Навыки</h2>
-        <p>Навык 1</p>
-        <p>Навык 2</p>
-        <p>Навык 3</p>
-        <p>Навык 4</p>
-      </section>
-      <section>
-        <h2>Опыт</h2>
-        <p>Опыт 1</p>
-        <p>Опыт 2</p>
-        <p>Опыт 3</p>
-        <p>Опыт 4</p>
-      </section>
-      <section id="contacts">
-        <h2>Контактная информация</h2>
-        <p>Усы, лапы и хвост. Вот мои документы.</p>
-        <a href="contacts.html">Подробнее</a>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Frontend. Все права защищены.</p>
-      <p>Телефон: +7 (123) 456-78-90</p>
-      <p>
-        <button class="theme-toggle" type="button" aria-pressed="false">
-          tema
-        </button>
-        <script defer>
-          const KEY = "theme",
-            btn = document.querySelector(".theme-toggle");
-          const prefersDark = matchMedia(
-            "(prefers-color-scheme: dark)"
-          ).matches;
-          if (
-            localStorage.getItem(KEY) === "dark" ||
-            (!localStorage.getItem(KEY) && prefersDark)
-          ) {
-            document.body.classList.add("theme-dark");
-            btn?.setAttribute("aria-pressed", "true");
-          }
-          btn?.addEventListener("click", () => {
-            const isDark = document.body.classList.toggle("theme-dark");
-            btn.setAttribute("aria-pressed", String(isDark));
-            localStorage.setItem(KEY, isDark ? "dark" : "light");
-          });
-        </script>
-      </p>
-    </footer>
+      </div>
+      <div class="content">
+      <h1 class="main-title">Добро пожаловать на наш сайт!</h1>
+      <div class="about">
+        <h2 class="profile-title">Информация об Авторе</h2>
+        <img
+          class="profile-photo"
+          src="assets/images/Autor.png"
+          alt="Фото автора"
+          width="200"
+          height="250"
+        />
+        <div class="profile-name">Титов Максим Дмитриевич</div>
+        <div class="profile-group">ЭФБО-16-24</div>
+        <div class="about-me">
+          Обо мне: Сначала был примерным мальчиком, а потооом... Продавал
+          разбавленное молоко, тыгыдыкал в 5 утра, убирал предметы со стола.
+        </p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-tag">Навык 1</div>
+        <div class="skill-tag">Навык 2</div>
+        <div class="skill-tag">Навык 3</div>
+        <div class="skill-tag">Навык 4</div>
+      </div>
+      <div class="experience-section">
+        <h2 class="section-title">Опыт</h2>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 1</h3>
+          <p class="experience-desc">Работал фантазёром.</p>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 2</h3>
+          <p class="experience-desc">Работал воровством.</p>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 3</h3>
+          <p class="experience-desc">Работал курьером.</p>
+        </div>
+      </div>
+      <div class="contacts">
+        <h2 class="contacts-title">Контактная информация</h2>
+        <p class="contacts-data">Усы, лапы и хвост. Вот мои документы.</p>
+        <a class="nav-link-secret" href="secret.html">Подробнее</a>
+      </div>
+      </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2025 Frontend. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>
+          <button class="theme-toggle" type="button" aria-pressed="false">
+            tema
+          </button>
+          <script defer>
+            const KEY = "theme",
+              btn = document.querySelector(".theme-toggle");
+            const prefersDark = matchMedia(
+              "(prefers-color-scheme: dark)"
+            ).matches;
+            if (
+              localStorage.getItem(KEY) === "dark" ||
+              (!localStorage.getItem(KEY) && prefersDark)
+            ) {
+              document.body.classList.add("theme-dark");
+              btn?.setAttribute("aria-pressed", "true");
+            }
+            btn?.addEventListener("click", () => {
+              const isDark = document.body.classList.toggle("theme-dark");
+              btn.setAttribute("aria-pressed", String(isDark));
+              localStorage.setItem(KEY, isDark ? "dark" : "light");
+            });
+          </script>
+        </p>
+      </div>
+    </div>
   </body>
 </html>

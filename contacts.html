@@ -12,90 +12,93 @@
       name="description"
       content="Узнайте больше о нашей компании и истории"
     />
-    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="goods.html">Товары</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
+      </div>
+      <div class="content">
+      <nav class="bread" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a> →
+        <span>Новости</span>
       </nav>
-    </header>
-    <main>
-      <a href="index.html">Главная</a> →
-      <span>Контакты</span>
-      <section id="pochta">
-        <h2>Почта</h2>
-        <p>skolatarov@gmail.com</p>
-      </section>
-      <section id="telephone">
-        <h2>Телефон</h2>
-        <p>+7 (123) 456-78-90</p>
-      </section>
+      <div class="pochta">
+        <h2 class="contact-title">Почта</h2>
+        <div class="mail">skolatarov@gmail.com</div>
+      </div>
+      <div class="telephone">
+        <h2 class="contact-title">Телефон</h2>
+        <div class="phone">+7 (123) 456-78-90</div>
+      </div>
       <p>
-          <button id="openDialog" type="button">Написать нам</button>
-          <dialog id="contactDialog" aria-labelledby="dialogTitle">
-            <h2 id="dialogTitle">Обратная связь</h2>
-            <form id="contactForm" method="dialog" novalidate>
-              <label for="name">Имя</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                minlength="2"
-                autocomplete="given-name"
-              />
-              <label for="email">E-mail</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                autocomplete="email"
-              />
-              <label for="phone">Телефон</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                inputmode="tel"
-                autocomplete="tel"
-                aria-describedby="phoneHelp"
-                placeholder="+7 (___) ___-__-__"
-                required
-                pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-              />
-              <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
-              <label for="date">Дата</label>
-              <input id="date" name="date" type="date" />
-              <label for="topic">Тема</label>
-              <select id="topic" name="topic" required>
-                <option value="">Выберите тему</option>
-                <option>Вопрос</option>
-                <option>Заказ</option>
-              </select>
-              <label for="message">Сообщение</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-              <div class="form-actions">
-                <button type="button" id="closeDialog">Закрыть</button>
-                <button type="submit">Отправить</button>
-              </div>
-            </form>
-          </dialog>
-        </p>
-    </main>
-    <footer>
+        <button id="openDialog" type="button">Написать нам</button>
+        <dialog id="contactDialog" aria-labelledby="dialogTitle">
+          <h2 id="dialogTitle">Обратная связь</h2>
+          <form id="contactForm" method="dialog" novalidate>
+            <label for="name">Имя</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              minlength="2"
+              autocomplete="given-name"
+            />
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+            <label for="phone">Телефон</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              aria-describedby="phoneHelp"
+              placeholder="+7 (___) ___-__-__"
+              required
+              pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            />
+            <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+            <label for="date">Дата</label>
+            <input id="date" name="date" type="date" />
+            <label for="topic">Тема</label>
+            <select id="topic" name="topic" required>
+              <option value="">Выберите тему</option>
+              <option>Вопрос</option>
+              <option>Заказ</option>
+            </select>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="form-actions">
+              <button type="button" id="closeDialog">Закрыть</button>
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </dialog>
+      </p>
+      </div>
+    <div class="footer">
       <p>&copy; 2025 Frontend. Все права защищены.</p>
       <p>Телефон: +7 (123) 456-78-90</p>
       <p>
@@ -122,6 +125,7 @@
           });
         </script>
       </p>
-    </footer>
+    </div>
+  </div>
   </body>
 </html>

@@ -8,46 +8,56 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>О нас - Frontend</title>
-    <meta
-      name="description"
-      content="Узнайте больше новостей"
-    />
-    <link href="css/styles.css" rel="stylesheet">
+    <meta name="description" content="Узнайте больше новостей" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="goods.html">Товары</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <nav aria-label="Хлебные крошки">
+      </div>
+      <div class="content">
+      <nav class="bread" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> →
         <span>Новости</span>
       </nav>
-      <h1>Новость 1</h1>
-      <section>
-        <h2>Заголовок новости 1</h2>
-        <p>Меня заставили</p>
-      </section>
-      <h1>Новость 2</h1>
-      <section>
-        <h2>Заголовок новости 2</h2>
-        <p>Меня заставили</p>
-      </section>
-      <h1>Новость 3</h1>
-      <section>
-        <h2>Заголовок новости 3</h2>
-        <p>Меня заставили</p>
-      </section>
-    </main>
-    <footer>
+      <div class="news-card">
+      <h1 class="news-number">Новость 1</h1>
+      <div class="news-data">
+        <h2 class="news-title">Учёные доказали, что коты видят пятое измерение</h2>
+        <div class="news-text">Согласно данным, домашние кошки обладают способностью ненадолго «соскальзывать» в пятое измерение, что объясняет их внезапные исчезновения и появления в закрытых комнатах.</div>
+      </div>
+      </div>
+      <div class="news-card">
+      <h1 class="news-number">Новость 2</h1>
+      <div class="news-data">
+        <h2 class="news-title">Московский кот Шредингера</h2>
+        <div class="news-text">Московского кота по кличке Барсик видели в трех комнатах одновременно, по сообщениям очевидцев.</div>
+      </div>
+      </div>
+      <div class="news-card">
+      <h1 class="news-number">Новость 3</h1>
+      <div class="news-data">
+        <h2 class="news-title">Кот из Новосибирска открыл в подвале секретную службу доставки</h2>
+        <div class="news-text">Хозяин обнаружил, что его кот Марсик организовал в подвале настоящую логистическую компанию. Услугами «Мур-Экспресс» пользуются все окрестные коты: они заказывают «трофеев»: носки, тапки и даже столовые приборы.</div>
+      </div>
+      </div>
+      </div>
+    <div class="footer">
       <p>&copy; 2025 Frontend. Все права защищены.</p>
       <p>Телефон: +7 (123) 456-78-90</p>
       <p>
@@ -74,6 +84,7 @@
           });
         </script>
       </p>
-    </footer>
+    </div>
+    </div>
   </body>
 </html>

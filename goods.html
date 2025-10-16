@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -8,124 +9,237 @@
       content="Заглушка описания товарной страницы сайта"
     />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <script src="js/main.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
   </head>
-
   <body>
-    <video class="bg-video" playsinline="" autoplay="" muted="" loop="" poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg">
-									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/ce3c0ab4139dfb57bb06b09d0f1ff60400801bb4.webm" type="video/webm">
-									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/e181d41d90b2c483b2ece5f58788edd255805d91.mp4" type="video/mp4">
-							</video>
+    <video
+      class="bg-video"
+      playsinline
+      autoplay
+      muted
+      loop
+      poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg"
+    >
+      <source
+        src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/ce3c0ab4139dfb57bb06b09d0f1ff60400801bb4.webm"
+        type="video/webm"
+      />
+      <source
+        src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/e181d41d90b2c483b2ece5f58788edd255805d91.mp4"
+        type="video/mp4"
+      />
+    </video>
+
     <div class="page-container">
-      <header class="logo" href="index.html">Frontend</header>
-      
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="goods.html">Товары</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <main class="content">
-        <nav class="bread" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a> →
-          <span class="toPage">Новости</span>
-        </nav>
-        <h1 class ="sales">СКИДОК НЕ БУДЕТ! 😡</h1>
-        <div class="goods-grid">
-        <div class="good-card">
-          <h1 class="good-name">Ложка</h1>
-          <img
-            class="good-photo"
-            src="assets/images/spoon.jpg"
-            alt="Фото товара"
-            width="200"
-            height="220"
-          />
-          <div class="good-price">10 Рыбок</div>
-          <button class="cart">В корзину</button>
+      <header
+        class="container-fluid bg-dark bg-opacity-75 text-white py-3 mb-4"
+      >
+        <div class="container">
+          <h1 class="h2 mb-0">Frontend</h1>
         </div>
-          <div class="good-card">
-            <h1 class="good-name">Носок</h1>
-            <img
-              class="good-photo"
-              src="assets/images/sock.png"
-              alt="Фото товара"
-              width="200"
-              height="250"
-            />
-            <div class="good-price">50 рыбок</div>
-            <button class="cart">В корзину</button>
+      </header>
+
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 mb-4"
+      >
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Новости</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="goods.html">Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
           </div>
-          <div class="good-card">
-            <h1 class="good-name">Тапочек</h1>
-            <img
-              class="good-photo"
-              src="assets/images/shoe.jpg"
-              alt="Фото товара"
-              width="200"
-              height="250"
-            />
-            <div class="good-price">100 рыбок</div>
-            <button class="cart">В корзину</button>
+        </div>
+      </nav>
+
+      <main class="container">
+        <nav aria-label="Хлебные крошки" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active">Товары</li>
+          </ol>
+        </nav>
+
+        <div class="alert alert-warning text-center mb-4">
+          <h2 class="alert-heading mb-0">СКИДОК НЕ БУДЕТ! 😡</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Ложка</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/spoon.jpg"
+                  alt="Фото товара"
+                  width="200"
+                  height="220"
+                />
+                <div class="good-price h5 text-primary mb-3">10 Рыбок</div>
+                <button class="btn btn-primary w-100">В корзину</button>
+              </div>
+            </div>
           </div>
-          <div class="good-card">
-            <h1 class="good-name">Носок</h1>
-            <img
-              class="good-photo"
-              src="assets/images/sock.png"
-              alt="Фото товара"
-              width="200"
-              height="250"
-            />
-            <div class="good-price">50 рыбок</div>
-            <button class="cart">В корзину</button>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Носок</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/sock.png"
+                  alt="Фото товара"
+                  width="200"
+                  height="250"
+                />
+                <div class="good-price h5 text-primary mb-3">50 рыбок</div>
+                <button class="btn btn-primary w-100">В корзину</button>
+              </div>
+            </div>
           </div>
-          <div class="good-card">
-            <h1 class="good-name">Носок</h1>
-            <img
-              class="good-photo"
-              src="assets/images/sock.png"
-              alt="Фото товара"
-              width="200"
-              height="250"
-            />
-            <div class="good-price">50 рыбок</div>
-            <button class="cart">В корзину</button>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Тапочек</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/shoe.jpg"
+                  alt="Фото товара"
+                  width="200"
+                  height="250"
+                />
+                <div class="good-price h5 text-primary mb-3">100 рыбок</div>
+                <button class="btn btn-primary w-100">В корзину</button>
+              </div>
+            </div>
           </div>
-          <div class="good-card good-card--active">
-            <h1 class="good-name">Носок</h1>
-            <img
-              class="good-photo"
-              src="assets/images/sock.png"
-              alt="Фото товара"
-              width="200"
-              height="250"
-            />
-            <div class="good-price">50 рыбок</div>
-            <button class="cart">В корзине</button>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Носок</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/sock.png"
+                  alt="Фото товара"
+                  width="200"
+                  height="250"
+                />
+                <div class="good-price h5 text-primary mb-3">50 рыбок</div>
+                <button class="btn btn-primary w-100">В корзину</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Носок</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/sock.png"
+                  alt="Фото товара"
+                  width="200"
+                  height="250"
+                />
+                <div class="good-price h5 text-primary mb-3">50 рыбок</div>
+                <button class="btn btn-primary w-100">В корзину</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 good-card good-card--active border-primary">
+              <div class="card-body text-center">
+                <h3 class="card-title good-name">Носок</h3>
+                <img
+                  class="img-fluid good-photo mb-3"
+                  src="assets/images/sock.png"
+                  alt="Фото товара"
+                  width="200"
+                  height="250"
+                />
+                <div class="good-price h5 text-primary mb-3">50 рыбок</div>
+                <button class="btn btn-success w-100">В корзине</button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <footer class="footer">
-        <p>&copy; 2025 Frontend. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-        <p>
-          <button class="theme-toggle" type="button" aria-pressed="false">
-            tema
-          </button>
-        </p>
+
+      <footer
+        class="container-fluid bg-dark bg-opacity-75 text-white mt-5 py-4"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="mb-1">&copy; 2025 Frontend. Все права защищены.</p>
+              <p class="mb-0">Телефон: +7 (123) 456-78-90</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <button class="theme-toggle" type="button" aria-pressed="false">
+                <div class="dark">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m15 8l-3-3l3-3l3 3zm5 3l-2-2l2-2l2 2zm-7.925 11q-2.1 0-3.937-.8t-3.2-2.162t-2.163-3.2t-.8-3.938q0-3.65 2.325-6.437T10.225 2q-.45 2.475.275 4.838t2.5 4.137t4.138 2.5t4.837.275q-.65 3.6-3.45 5.925T12.075 22"
+                    />
+                  </svg>
+                </div>
+                <div class="light">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 5.423q-.213 0-.357-.144t-.143-.356V2.539q0-.213.144-.357t.357-.144t.356.144t.143.356v2.385q0 .213-.144.356t-.357.144m4.643 1.935q-.14-.14-.13-.342q.01-.2.15-.366l1.65-1.694q.15-.166.359-.166t.377.17q.156.156.156.35t-.16.354L17.35 7.358q-.16.16-.354.16t-.354-.16m2.435 5.142q-.213 0-.356-.144t-.144-.357t.144-.356t.356-.143h2.385q.212 0 .356.144t.143.357t-.143.356t-.357.143zm-7.078 9.462q-.212 0-.356-.144t-.143-.357v-2.365q0-.212.144-.356t.357-.144t.356.144t.143.356v2.366q0 .212-.144.356t-.357.143M6.67 7.359l-1.713-1.67q-.166-.149-.166-.36t.166-.372q.16-.14.366-.14t.341.14L7.378 6.67q.14.134.14.341t-.136.348q-.15.14-.348.14t-.364-.14m11.662 11.686l-1.67-1.694q-.14-.165-.15-.366t.128-.342t.34-.14t.371.16l1.694 1.669q.146.14.143.344t-.149.37q-.16.164-.366.164t-.341-.165M2.539 12.5q-.213 0-.357-.144t-.143-.357t.143-.356t.357-.143h2.384q.213 0 .356.144t.144.357t-.144.356t-.356.143zm2.436 6.544q-.14-.16-.15-.363t.13-.344l1.676-1.675q.16-.16.35-.16t.358.155q.165.17.165.371t-.165.366l-1.65 1.65q-.166.166-.373.166t-.341-.166M12.005 17q-2.082 0-3.544-1.457T7 12.005T8.457 8.46T11.995 7t3.544 1.457T17 11.995t-1.457 3.544T12.005 17"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

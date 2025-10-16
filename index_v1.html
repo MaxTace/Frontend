@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Заглушка Новостей" />
+    <title>Главная - Frontend</title>
+    <meta
+      name="description"
+      content="Заглушка описания главной страницы сайта"
+    />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Новости - Frontend</title>
-    <meta name="description" content="Узнайте больше новостей" />
-    <link href="css/styles.css" rel="stylesheet" />
   </head>
+
   <body>
-    <video class="bg-video" playsinline="" autoplay="" muted="" loop="" poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg">
+  <video class="bg-video" playsinline="" autoplay="" muted="" loop="" poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg">
 									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/ce3c0ab4139dfb57bb06b09d0f1ff60400801bb4.webm" type="video/webm">
 									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/e181d41d90b2c483b2ece5f58788edd255805d91.mp4" type="video/mp4">
 							</video>
-    <main class="page-container">
+    <div class="page-container">
       <header class="logo" href="index.html">Frontend</header>
       <nav class="nav">
         <ul class="nav-list">
@@ -35,47 +37,52 @@
         </ul>
       </nav>
       <main class="content">
-        <nav class="bread" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a> →
-          <span class="toPage">Новости</span>
-        </nav>
-        <div class="news-card">
-          <h1 class="news-number">Новость 1</h1>
-          <div class="news-data">
-            <h2 class="news-title">
-              Учёные доказали, что коты видят пятое измерение
-            </h2>
-            <div class="news-text">
-              Согласно данным, домашние кошки обладают способностью ненадолго
-              «соскальзывать» в пятое измерение, что объясняет их внезапные
-              исчезновения и появления в закрытых комнатах.
-            </div>
-          </div>
+      <h1 class="main-title">Добро пожаловать на наш сайт!</h1>
+      <div class="about">
+        <h2 class="profile-title">Информация об Авторе</h2>
+        <img
+          class="profile-photo"
+          src="assets/images/Autor.png"
+          alt="Фото автора"
+          width="200"
+          height="250"
+        />
+        <div class="profile-name">Титов Максим Дмитриевич</div>
+        <div class="profile-group">ЭФБО-16-24</div>
+        <section class="about-me">
+          Обо мне: Сначала был примерным мальчиком, а потооом... Продавал
+          разбавленное молоко, тыгыдыкал в 5 утра, убирал предметы со стола.
+        </section>
+      </div>
+
+      <section class="skills-container">
+        <div class="skill-tag">Навык 1</div>
+        <div class="skill-tag">Навык 2</div>
+        <div class="skill-tag">Навык 3</div>
+        <div class="skill-tag">Навык 4</div>
+      </section>
+
+      <section class="experience-section">
+        <h2 class="section-title">Опыт</h2>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 1</h3>
+          <p class="experience-desc">Работал фантазёром.</p>
         </div>
-        <div class="news-card">
-          <h1 class="news-number">Новость 2</h1>
-          <div class="news-data">
-            <h2 class="news-title">Московский кот Шредингера</h2>
-            <div class="news-text">
-              Московского кота по кличке Барсик видели в трех комнатах
-              одновременно, по сообщениям очевидцев.
-            </div>
-          </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 2</h3>
+          <p class="experience-desc">Работал воровством.</p>
         </div>
-        <div class="news-card">
-          <h1 class="news-number">Новость 3</h1>
-          <div class="news-data">
-            <h2 class="news-title">
-              Кот из Новосибирска открыл в подвале секретную службу доставки
-            </h2>
-            <div class="news-text">
-              Хозяин обнаружил, что его кот Марсик организовал в подвале
-              настоящую логистическую компанию. Услугами «Мур-Экспресс»
-              пользуются все окрестные коты: они заказывают «трофеев»: носки,
-              тапки и даже столовые приборы.
-            </div>
-          </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 3</h3>
+          <p class="experience-desc">Работал курьером.</p>
         </div>
+      </section>
+
+      <section class="contacts">
+        <h1 class="contacts-title">Контактная информация</h1>
+        <h2 class="contacts-data">Усы, лапы и хвост. Вот мои документы.</h2>
+        <a class="nav-link-secret" href="secret.html">Подробнее</a>
+      </section>
       </main>
       <footer class="footer">
         <p>&copy; 2025 Frontend. Все права защищены.</p>
@@ -91,6 +98,6 @@
           </button>
         </p>
       </footer>
-    </main>
+    </div>
   </body>
 </html>

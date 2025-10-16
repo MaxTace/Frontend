@@ -1,41 +1,42 @@
-window.addEventListener("load", () => {
-  const dlg = document.getElementById("contactDialog");
-  const openBtn = document.getElementById("openDialog");
-  const closeBtn = document.getElementById("closeDialog");
-  const form = document.getElementById("contactForm");
-  let lastActive = null;
-  openBtn.addEventListener("click", () => {
-    lastActive = document.activeElement;
-    dlg.showModal();
-    dlg.querySelector("input,select,textarea,button")?.focus();
-  });
-  closeBtn.addEventListener("click", () => dlg.close("cancel"));
-  form?.addEventListener("submit", (e) => {});
-  dlg.addEventListener("close", () => {
-    lastActive?.focus();
-  });
+function submitForm() {
+ const form = document.getElementById('feedbackForm');
+ const formData = new FormData(form);
 
-  form?.addEventListener("submit", (e) => {
-    [...form.elements].forEach((el) => el.setCustomValidity?.(""));
-    if (!form.checkValidity()) {
-      e.preventDefault();
+ if (!form.checkValidity()) {
+ form.reportValidity();
+ return;
+ }
+ const data = {
+ name: formData.get('name'),
+ phone: formData.get('phone'),
+ email: formData.get('email'),
+ category: formData.get('category'),
+ message: formData.get('message')
+ };
+ console.log('Данные формы:', data);
 
-      const email = form.elements.email;
-      if (email?.validity.typeMismatch) {
-        mail.setCustomValidity(
-          "Введите корректный e-mail, например name@example.com"
-        );
-      }
-      form.reportValidity();
-      [...form.elements].forEach((el) => {
-        if (el.willValidate)
-          el.toggleAttribute("aria-invalid", !el.checkValidity());
-      });
-      return;
-    }
-    e.preventDefault();
+ alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
 
-    document.getElementById("contactDialog")?.close("success");
-    form.reset();
-  });
+ contactModal.close();
+
+ form.reset();
+ }
+ document.getElementById('contactModal').addEventListener('click',
+function(event) {
+ if (event.target === this) {
+ this.close();
+ }
 });
+document.getElementById('feedbackForm').addEventListener('keypress',
+  function(event) {
+ if (event.key === 'Enter' && event.target.type !== 'textarea')
+{
+ event.preventDefault();
+ }
+});
+
+function cancelFeedback(){
+  const form = document.getElementById('feedbackForm');
+  contactModal.close();
+  form.reset();
+}

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Заглушка контактов" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/contacts.js" defer></script>
     <title>Контакты - Frontend</title>
     <meta
       name="description"
@@ -14,6 +15,10 @@
     />
   </head>
   <body>
+    <video class="bg-video" playsinline="" autoplay="" muted="" loop="" poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg">
+									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/ce3c0ab4139dfb57bb06b09d0f1ff60400801bb4.webm" type="video/webm">
+									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/e181d41d90b2c483b2ece5f58788edd255805d91.mp4" type="video/mp4">
+							</video>
     <div class="page-container">
       <header class="logo" href="index.html">Frontend</header>
       <nav class="nav">
@@ -35,7 +40,7 @@
       <main class="content">
         <div class="bread" aria-label="Хлебные крошки">
           <a href="index.html">Главная</a> →
-          <span>Новости</span>
+          <span class="toPage">Новости</span>
         </div>
         <section class="contacts">
           <div class="pochta">
@@ -132,25 +137,6 @@
           <button class="theme-toggle" type="button" aria-pressed="false">
             tema
           </button>
-          <script defer>
-            const KEY = "theme",
-              btn = document.querySelector(".theme-toggle");
-            const prefersDark = matchMedia(
-              "(prefers-color-scheme: dark)"
-            ).matches;
-            if (
-              localStorage.getItem(KEY) === "dark" ||
-              (!localStorage.getItem(KEY) && prefersDark)
-            ) {
-              document.body.classList.add("theme-dark");
-              btn?.setAttribute("aria-pressed", "true");
-            }
-            btn?.addEventListener("click", () => {
-              const isDark = document.body.classList.toggle("theme-dark");
-              btn.setAttribute("aria-pressed", String(isDark));
-              localStorage.setItem(KEY, isDark ? "dark" : "light");
-            });
-          </script>
         </p>
       </footer>
     </div>

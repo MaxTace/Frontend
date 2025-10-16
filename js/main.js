@@ -1,42 +1,15 @@
-function submitForm() {
- const form = document.getElementById('feedbackForm');
- const formData = new FormData(form);
-
- if (!form.checkValidity()) {
- form.reportValidity();
- return;
- }
- const data = {
- name: formData.get('name'),
- phone: formData.get('phone'),
- email: formData.get('email'),
- category: formData.get('category'),
- message: formData.get('message')
- };
- console.log('Данные формы:', data);
-
- alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
-
- contactModal.close();
-
- form.reset();
- }
- document.getElementById('contactModal').addEventListener('click',
-function(event) {
- if (event.target === this) {
- this.close();
- }
-});
-document.getElementById('feedbackForm').addEventListener('keypress',
-  function(event) {
- if (event.key === 'Enter' && event.target.type !== 'textarea')
-{
- event.preventDefault();
- }
-});
-
-function cancelFeedback(){
-  const form = document.getElementById('feedbackForm');
-  contactModal.close();
-  form.reset();
+const KEY = "theme",
+  btn = document.querySelector(".theme-toggle");
+const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+if (
+  localStorage.getItem(KEY) === "dark" ||
+  (!localStorage.getItem(KEY) && prefersDark)
+) {
+  document.body.classList.add("theme-dark");
+  btn?.setAttribute("aria-pressed", "true");
 }
+btn?.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("theme-dark");
+  btn.setAttribute("aria-pressed", String(isDark));
+  localStorage.setItem(KEY, isDark ? "dark" : "light");
+});

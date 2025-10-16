@@ -1,23 +1,25 @@
-<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Заглушка Новостей" />
+    <title>Товары - Frontend</title>
+    <meta
+      name="description"
+      content="Заглушка описания товарной страницы сайта"
+    />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Новости - Frontend</title>
-    <meta name="description" content="Узнайте больше новостей" />
-    <link href="css/styles.css" rel="stylesheet" />
   </head>
+
   <body>
     <video class="bg-video" playsinline="" autoplay="" muted="" loop="" poster="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/c8d6fb78b5dff3939758f6c590176572afe60f88.jpg">
 									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/ce3c0ab4139dfb57bb06b09d0f1ff60400801bb4.webm" type="video/webm">
 									<source src="https://shared.fastly.steamstatic.com/community_assets/images/items/2118370/e181d41d90b2c483b2ece5f58788edd255805d91.mp4" type="video/mp4">
 							</video>
-    <main class="page-container">
+    <div class="page-container">
       <header class="logo" href="index.html">Frontend</header>
+      
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
@@ -39,41 +41,79 @@
           <a href="index.html">Главная</a> →
           <span class="toPage">Новости</span>
         </nav>
-        <div class="news-card">
-          <h1 class="news-number">Новость 1</h1>
-          <div class="news-data">
-            <h2 class="news-title">
-              Учёные доказали, что коты видят пятое измерение
-            </h2>
-            <div class="news-text">
-              Согласно данным, домашние кошки обладают способностью ненадолго
-              «соскальзывать» в пятое измерение, что объясняет их внезапные
-              исчезновения и появления в закрытых комнатах.
-            </div>
-          </div>
+        <h1 class ="sales">СКИДОК НЕ БУДЕТ! 😡</h1>
+        <div class="goods-grid">
+        <div class="good-card">
+          <h1 class="good-name">Ложка</h1>
+          <img
+            class="good-photo"
+            src="assets/images/spoon.jpg"
+            alt="Фото товара"
+            width="200"
+            height="220"
+          />
+          <div class="good-price">10 Рыбок</div>
+          <button class="cart">В корзину</button>
         </div>
-        <div class="news-card">
-          <h1 class="news-number">Новость 2</h1>
-          <div class="news-data">
-            <h2 class="news-title">Московский кот Шредингера</h2>
-            <div class="news-text">
-              Московского кота по кличке Барсик видели в трех комнатах
-              одновременно, по сообщениям очевидцев.
-            </div>
+          <div class="good-card">
+            <h1 class="good-name">Носок</h1>
+            <img
+              class="good-photo"
+              src="assets/images/sock.png"
+              alt="Фото товара"
+              width="200"
+              height="250"
+            />
+            <div class="good-price">50 рыбок</div>
+            <button class="cart">В корзину</button>
           </div>
-        </div>
-        <div class="news-card">
-          <h1 class="news-number">Новость 3</h1>
-          <div class="news-data">
-            <h2 class="news-title">
-              Кот из Новосибирска открыл в подвале секретную службу доставки
-            </h2>
-            <div class="news-text">
-              Хозяин обнаружил, что его кот Марсик организовал в подвале
-              настоящую логистическую компанию. Услугами «Мур-Экспресс»
-              пользуются все окрестные коты: они заказывают «трофеев»: носки,
-              тапки и даже столовые приборы.
-            </div>
+          <div class="good-card">
+            <h1 class="good-name">Тапочек</h1>
+            <img
+              class="good-photo"
+              src="assets/images/shoe.jpg"
+              alt="Фото товара"
+              width="200"
+              height="250"
+            />
+            <div class="good-price">100 рыбок</div>
+            <button class="cart">В корзину</button>
+          </div>
+          <div class="good-card">
+            <h1 class="good-name">Носок</h1>
+            <img
+              class="good-photo"
+              src="assets/images/sock.png"
+              alt="Фото товара"
+              width="200"
+              height="250"
+            />
+            <div class="good-price">50 рыбок</div>
+            <button class="cart">В корзину</button>
+          </div>
+          <div class="good-card">
+            <h1 class="good-name">Носок</h1>
+            <img
+              class="good-photo"
+              src="assets/images/sock.png"
+              alt="Фото товара"
+              width="200"
+              height="250"
+            />
+            <div class="good-price">50 рыбок</div>
+            <button class="cart">В корзину</button>
+          </div>
+          <div class="good-card good-card--active">
+            <h1 class="good-name">Носок</h1>
+            <img
+              class="good-photo"
+              src="assets/images/sock.png"
+              alt="Фото товара"
+              width="200"
+              height="250"
+            />
+            <div class="good-price">50 рыбок</div>
+            <button class="cart">В корзине</button>
           </div>
         </div>
       </main>
@@ -91,6 +131,6 @@
           </button>
         </p>
       </footer>
-    </main>
+    </div>
   </body>
 </html>
